@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer" />
+    <title>个人信息</title>
+</head>
+<body>
+{% load myfilter %}{# 引用 #}
+{% load mytags %}
+<h2>当前时间：{% current_time %}</h2>
+<h1>昵称：{{ nicheng | default:"nothing"}}</h1>{# 为空输出默认值 #}
+<p>姓名：{{ name | replace:"+" }}</p>{# 引用 转换 #}
+<p>年龄：{{ age | add:"2"}}</p>{# 基础值上加 #}
+<p>兴趣数：{{ fancy | length }}</p>
+<p>兴趣：{{ fancy | join:" | "}}</p>{# 取值 #}
+<p>兴趣：{{ fancy | first}}</p>{# 取值 #}
+<p>兴趣：{{ fancy.0}},{{ fancy.1}},{{ fancy.2}}</p>
+<p>博客地址</p>
+<a href="{{ blog.url }}">{{ blog.url }}</a>
+<p>头像
+    <img src="{{ blog.img }}">
+</p>
+<p>name:{{ myblog.name }}</p>
+<p>关注:{{ myblog.guanzhu }}</p>
+<p>粉丝:{{ myblog.fensi }}</p>
+<p>链接:{{ a | safe }}</p>
+</body>
+</html>

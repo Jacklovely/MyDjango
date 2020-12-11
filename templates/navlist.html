@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% for name in name_list %}
+    <h2>{{ name.type }}</h2>
+    <p>
+    {% for value in name.value %}
+        {% if forloop.first %} -
+        {% endif %}
+        {{ value }}
+        {% if not forloop.last %} |
+        {% endif %}
+        {% empty %}
+            null
+    {% endfor %}
+    </p>
+{% endfor %}
+
+</body>
+</html>

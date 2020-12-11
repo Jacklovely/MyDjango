@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <style type="text/css">
+        #top{
+            width: 100%;
+            height: 600px;
+        }
+        #bottom{
+            width: 100%;
+            height: 100px;
+        }
+        #navlist{
+            width: 24%;
+            float: left;
+            height: 80%;
+        }
+        #bodytext{
+            float: left;
+            width: 52%;
+            height: 80%;
+        }
+        #advest{
+            width: 24%;
+            float: left;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+<div id="bannar">
+    <h1>菜鸟教程</h1>
+    <p>
+        <span>首页 | html | css |python </span>
+    </p>
+</div>
+<div id ='top'>
+    <div id="navlist">
+        {% block navlist %}{% endblock %}
+    </div>
+    <div id="bodytext">
+        {% block bodytext %}{% endblock %}
+    </div>
+    <div id="advest">
+        {% block advest %}{% endblock %}
+    </div>
+</div>
+<div id="bottom">
+    <p>底部版权声明</p>
+</div>
+</body>
+</html>

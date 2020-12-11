@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+{% extends 'base.html' %}{# 调用 #}
+{% block navlist %}
+{% include 'navlist_temp.html'%} {# 导入 #}
+{% endblock %}
+{% block bodytext %}{# 重写 #}
+    <h1> html - 练习</h1>
+    <p>
+        超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。
+   </p>
+    <p>
+        您可以使用 HTML 来建立自己的 WEB 站点，HTML 运行在浏览器上，由浏览器来解析。
+    </p>
+    <p>
+        在本教程中，您将学习如何使用 HTML 来创建站点。
+    </p>
+    <p>
+        HTML 很容易学习！相信您能很快学会它！
+    </p>
+{% endblock %}
+{% block advest %}
+    <h2>右侧东西</h2>
+{% endblock %}
+</body>
+</html>
